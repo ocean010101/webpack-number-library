@@ -1,18 +1,23 @@
 {
   "name": "webpack-number-library",
   "version": "1.0.0",
-  "description": "webpack  library learn",
-  "main": "index.js",
+  "description": "webpack library learn",
+  "main": "dist/webpack-numbers.js",
   "scripts": {
-    "build:browser": "webpack && cp dist/webpack-numbers.js examples/browser",
-    "build:node": "webpack && cp dist/webpack-numbers.js examples/node/ && node examples/node/example.js",
+    "build:browser": "webpack && copy dist\\webpack-numbers.js examples\\browser",
+    "build:node": "webpack && copy dist\\webpack-numbers.js examples\\node && node examples\\node\\example.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ocean010101/webpack-number-library.git"
   },
-  "keywords": [],
+  "keywords": [
+    "webpack",
+    "webpack-library",
+    "bundling",
+    "library"
+  ],
   "author": "yangyang.xu",
   "license": "ISC",
   "bugs": {
@@ -20,7 +25,8 @@
   },
   "homepage": "https://github.com/ocean010101/webpack-number-library#readme",
   "devDependencies": {
-    "babel-loader": "^8.0.5",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
     "webpack": "^4.31.0",
     "webpack-cli": "^3.3.2"
   },

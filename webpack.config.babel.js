@@ -7,8 +7,8 @@ module.exports = {
         path: path.resolve(__dirname, './dist'),
         filename: 'webpack-numbers.js',
         library: 'webpackNumbers',//暴露 library为webpackNumbers的全局变量
-        libraryTarget: 'umd'//让 library 和其他环境兼容：umd:在 AMD 或 CommonJS 的 require 之后可访问
-        // globalObject: 'this',//?????
+        libraryTarget: 'umd',//让 library 和其他环境兼容：umd:在 AMD 或 CommonJS 的 require 之后可访问
+        globalObject: 'this',//使umd 在浏览器和node.js 上都可用，globalObject需要设置成this
     },
     externals: {//外部化 lodash:放弃对外部 library 的控制，而是将控制权让给使用 library 的用户
         lodash: {
